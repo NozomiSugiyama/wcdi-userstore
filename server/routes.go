@@ -1,6 +1,9 @@
 package server
 
-import "net/http"
+import (
+	"net/http"
+	"github.com/wcdi/wcdi-userstore/server/handler"
+)
 
 type Route struct {
 	Name string
@@ -16,12 +19,12 @@ var routes = Routes{
 		"Index",
 		"GET",
 		"/",
-		Index,
+		handler.Index,
 	},
 	Route{
 		"User",
 		"GET",
 		"/user",
-		UserList,
+		handler.UserList,
 	},
 }

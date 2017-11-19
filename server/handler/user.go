@@ -1,17 +1,10 @@
-package server
+package handler
 
 import (
 	"encoding/json"
-	"fmt"
-	"html"
 	"net/http"
-
 	"github.com/wcdi/wcdi-userstore/server/model"
 )
-
-func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-}
 
 func UserList(w http.ResponseWriter, r *http.Request) {
 	users := model.Users{}
@@ -19,4 +12,7 @@ func UserList(w http.ResponseWriter, r *http.Request) {
 	if err := json.NewEncoder(w).Encode(users); err != nil {
 		panic(err)
 	}
+}
+
+func UserCreate(w http.ResponseWriter, r *http.Request) {
 }
