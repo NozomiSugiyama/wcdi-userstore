@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/wcdi/wcdi-auth/cmd"
+	"github.com/wcdi/wcdi-userstore/cmd"
 )
 
 func main() {

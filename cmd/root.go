@@ -11,8 +11,8 @@ import (
 var cfgFile string
 
 var RootCmd = &cobra.Command{
-	Use:   "wcdi-auth",
-	Short: "wcdi auth system",
+	Use:   "wcdi-userstore",
+	Short: "wcdi userstore service",
 }
 
 func init() {
@@ -24,7 +24,7 @@ func initConfig() {
 		viper.SetConfigFile(cfgFile)
 	}
 
-	viper.SetConfigName(".wcdi-auth")
+	viper.SetConfigName(".wcdi-userstore")
 	viper.AddConfigPath("$HOME")
 	viper.AutomaticEnv()
 
