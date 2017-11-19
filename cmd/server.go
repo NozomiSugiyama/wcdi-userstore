@@ -1,6 +1,9 @@
 package cmd
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+	"github.com/wcdi/wcdi-userstore/server"
+)
 
 func init() {
 	RootCmd.AddCommand(newServerCommand())
@@ -33,5 +36,5 @@ func newStartServerCmd() *cobra.Command {
 }
 
 func runStartServerCmd(cmd *cobra.Command, args []string) error {
-	return nil
+	return server.StartServer()
 }

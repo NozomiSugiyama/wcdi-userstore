@@ -1,18 +1,21 @@
 package server
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/urfave/negroni"
 )
 
-func StartServer() {
+func StartServer() error {
 	router := NewRouter()
 
 	n := negroni.New()
 	n.Use(negroni.NewLogger())
 	n.UseHandler(router)
 
-	log.Fatal(http.ListenAndServe(":8080", n))
+	if err := http.ListenAndServe(":8080", n); err != nil {
+		return err
+	}
+
+	return nil
 }
