@@ -4,34 +4,47 @@ import (
 	"encoding/json"
 	"net/http"
 	"github.com/wcdi/wcdi-userstore/server/model"
+	"github.com/gorilla/mux"
 )
 
 func UserList(w http.ResponseWriter, r *http.Request) {
-	users := model.Users{}
+	users, err := model.GetUsers()
+
+	if err != nil {
+		panic(err)
+	}
 
 	if err := json.NewEncoder(w).Encode(users); err != nil {
 		panic(err)
 	}
-
-	return
 }
 
 func UserShow(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotImplemented)
-	return
+	vars := mux.Vars(r)
+	user, err :=  model.GetUser(vars["id"])
+
+	if err != nil {
+		panic(err)
+	}
+
+	if err := json.NewEncoder(w).Encode(user); err != nil {
+		panic(err)
+	}
 }
 
 func UserCreate(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNotImplemented)
-	return
 }
 
 func UserDelete(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotImplemented)
-	return
+	vars := mux.Vars(r)
+	if err :=  model.DeleteUser(vars["id"]); err != nil {
+		panic(err)
+	}
+
+	w.WriteHeader(http.StatusNoContent)
 }
 
 func UserUpdate(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusNotImplemented)
-	return
 }

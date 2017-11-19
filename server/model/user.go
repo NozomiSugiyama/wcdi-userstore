@@ -29,3 +29,25 @@ type User struct {
 }
 
 type Users []User
+
+func GetUsers() (Users, error) {
+	users := Users{}
+	return users, nil
+}
+
+func CreateUser(user User) error {
+	return nil
+}
+
+func GetUser(id string) (User, error) {
+	user := User{}
+	return user, nil
+}
+
+func UpdateUser(user User) error {
+	return nil
+}
+
+func DeleteUser(id string) error {
+	return nil
+}
