@@ -22,6 +22,6 @@ var routes = Routes{
 		"User",
 		"GET",
 		"/user",
-		User,
+		UserList,
 	},
 }
