@@ -1,4 +1,7 @@
 
+/vendor
+main
+
 # Created by https://www.gitignore.io/api/go,linux,vim,intellij+all
 
 ### Go ###
