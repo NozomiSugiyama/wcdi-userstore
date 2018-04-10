@@ -2,12 +2,13 @@ package server
 
 import (
 	"net/http"
-	"github.com/wcdi/wcdi-userstore/server/handler"
+
+	"github.com/NozomiSugiyama/wcdi-userstore/server/handler"
 )
 
 type Route struct {
-	Method string
-	Pattern string
+	Method      string
+	Pattern     string
 	HandlerFunc http.HandlerFunc
 }
 

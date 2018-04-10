@@ -43,7 +43,7 @@
 
 [[constraint]]
   branch = "develop"
-  name = "github.com/wcdi/wcdi-userstore"
+  name = "github.com/NozomiSugiyama/wcdi-userstore"
 
 [[constraint]]
   branch = "v2"

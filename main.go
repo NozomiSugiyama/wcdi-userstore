@@ -1,10 +1,10 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 
-	"github.com/wcdi/wcdi-userstore/cmd"
+	"github.com/NozomiSugiyama/wcdi-userstore/cmd"
 )
 
 func main() {

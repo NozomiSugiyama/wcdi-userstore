@@ -3,7 +3,8 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
-	"github.com/wcdi/wcdi-userstore/server/model"
+
+	"github.com/NozomiSugiyama/wcdi-userstore/server/model"
 	"github.com/gorilla/mux"
 )
 
@@ -21,7 +22,7 @@ func UserList(w http.ResponseWriter, r *http.Request) {
 
 func UserShow(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	user, err :=  model.GetUser(vars["id"])
+	user, err := model.GetUser(vars["id"])
 
 	if err != nil {
 		panic(err)
@@ -38,7 +39,7 @@ func UserCreate(w http.ResponseWriter, r *http.Request) {
 
 func UserDelete(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	if err :=  model.DeleteUser(vars["id"]); err != nil {
+	if err := model.DeleteUser(vars["id"]); err != nil {
 		panic(err)
 	}
 

@@ -42,6 +42,10 @@ func GetUsers() (Users, error) {
 	fmt.Printf("Hello")
 	fmt.Printf("%+v\n", p)
 
+	users = append(users, User{ID: "1"})
+	users = append(users, User{ID: "2"})
+	users = append(users, User{ID: "3"})
+
 	return users, nil
 }
 

@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/wcdi/wcdi-userstore/server"
+	"github.com/NozomiSugiyama/wcdi-userstore/server"
 )
 
 func init() {
