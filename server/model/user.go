@@ -16,16 +16,9 @@ type User struct {
 	SlackID           string   `json:"slack_id"`
 	GithubID          string   `json:"github_id"`
 	License           []string `json:"license"`
-	Neec              struct {
-		StudentID      string `json:"student_id"`
-		CollegeName    string `json:"college_name"`
-		DepartmentName string `json:"department_name"`
-		AdmissionYear  int    `json:"admission_year"`
-		Class          int    `json:"class"`
-	} `json:"neec"`
-	Wcdi struct {
-		Position string `json:"position"`
-	} `json:"wcdi"`
+	SubscriptionReligion struct {
+		ID string `json:"_id"`
+	} `json:"subscription_religion"`
 }
 
 type Users []User
