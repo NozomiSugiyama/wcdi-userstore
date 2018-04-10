@@ -2,7 +2,8 @@ package model
 
 import (
 	"fmt"
-    "log"
+	"log"
+
 	"gopkg.in/mgo.v2/bson"
 )
 
@@ -38,7 +39,7 @@ func GetUsers() (Users, error) {
 	query := db.C("users").Find(bson.M{})
 	query.One(&p)
 
-    log.Printf("hello")
+	log.Printf("hello")
 	fmt.Printf("Hello")
 	fmt.Printf("%+v\n", p)
 
