@@ -10,7 +10,7 @@
     "server/handler",
     "server/model"
   ]
-  revision = "de952d06070cd77adf9018becb98a763f7778214"
+  revision = "35dbdadedcd26a59f2c9b3707918b619097ce26a"
 
 [[projects]]
   name = "github.com/fsnotify/fsnotify"
@@ -115,16 +115,6 @@
   packages = ["."]
   revision = "5dbbc83f748fc3ad38585842b0aedab546d0ea1e"
   version = "v0.3.0"
-
-[[projects]]
-  branch = "develop"
-  name = "github.com/wcdi/wcdi-userstore"
-  packages = [
-    "server",
-    "server/handler",
-    "server/model"
-  ]
-  revision = "f876b1939274dcb07c10952801d6083c2b1f184a"
 
 [[projects]]
   branch = "master"
