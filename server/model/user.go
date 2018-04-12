@@ -39,9 +39,9 @@ func GetUsers() (Users, error) {
 	query := db.C("users").Find(bson.M{})
 	query.One(&p)
 
-	log.Printf("hello")
-	fmt.Printf("Hello")
-	fmt.Printf("%+v\n", p)
+	// log.Printf("hello")
+	// fmt.Printf("Hello")
+	// fmt.Printf("%+v\n", p)
 
 	users = append(users, User{ID: "1"})
 	users = append(users, User{ID: "2"})
