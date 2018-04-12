@@ -1,8 +1,8 @@
 package model
 
 import (
-	"fmt"
-	"log"
+	// "fmt"
+	// "log"
 
 	"gopkg.in/mgo.v2/bson"
 )
