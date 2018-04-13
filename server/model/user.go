@@ -1,8 +1,7 @@
 package model
 
 import (
-	// "fmt"
-	// "log"
+	"fmt"
 
 	"gopkg.in/mgo.v2/bson"
 )
@@ -35,13 +34,11 @@ func GetUsers() (Users, error) {
 	var session = GetSession("mongodb")
 	db := session.DB("test")
 
-	p := new(User)
+	p := make([]User, 0, 10)
 	query := db.C("users").Find(bson.M{})
-	query.One(&p)
+	query.All(&p)
 
-	// log.Printf("hello")
-	// fmt.Printf("Hello")
-	// fmt.Printf("%+v\n", p)
+	fmt.Printf("%+v\n", p)
 
 	users = append(users, User{ID: "1"})
 	users = append(users, User{ID: "2"})
