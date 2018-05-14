@@ -42,10 +42,6 @@
   version = "0.3.0"
 
 [[constraint]]
-  branch = "develop"
-  name = "github.com/NozomiSugiyama/wcdi-userstore"
-
-[[constraint]]
   branch = "v2"
   name = "gopkg.in/mgo.v2"
 

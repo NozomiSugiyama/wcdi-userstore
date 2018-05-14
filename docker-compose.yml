@@ -22,6 +22,7 @@ services:
       - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
       - ME_CONFIG_BASICAUTH_USERNAME=user1
       - ME_CONFIG_BASICAUTH_PASSWORD=password
+      - GOPATH=/go
     image: mongo-express
   wcdi-userstore:
     image: golang:1.10
@@ -29,9 +30,9 @@ services:
       - mongodb:mongo
     ports:
       - 8080:8080
-    command: go run /go/src/app/main.go server start
+    command: go run /go/src/github.com/NozomiSugiyama/wcdi-userstore/main.go server start
     volumes:
-      - ./:/go/src/app
+      - ${GOPATH}:/go
 
 volumes:
   mongodb-data: {}
