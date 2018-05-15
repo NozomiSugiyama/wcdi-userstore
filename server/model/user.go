@@ -2,7 +2,6 @@ package model
 
 import (
 	"fmt"
-
 	"gopkg.in/mgo.v2/bson"
 )
 
@@ -40,9 +39,9 @@ func GetUsers() (Users, error) {
 
 	fmt.Printf("%+v\n", p)
 
-	users = append(users, User{ID: "1"})
-	users = append(users, User{ID: "2"})
-	users = append(users, User{ID: "3"})
+	// users = append(users, User{ID: "1"})
+	// users = append(users, User{ID: "2"})
+	// users = append(users, User{ID: "3"})
 
 	return users, nil
 }

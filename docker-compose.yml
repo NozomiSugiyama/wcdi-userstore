@@ -22,7 +22,6 @@ services:
       - ME_CONFIG_OPTIONS_EDITORTHEME=ambiance
       - ME_CONFIG_BASICAUTH_USERNAME=user1
       - ME_CONFIG_BASICAUTH_PASSWORD=password
-      - GOPATH=/go
     image: mongo-express
   wcdi-userstore:
     image: golang:1.10

@@ -22,27 +22,27 @@ var routes = Routes{
 	},
 	Route{
 		"GET",
-		"/user",
+		"/users",
 		handler.UserList,
 	},
 	Route{
 		"POST",
-		"/user",
+		"/users",
 		handler.UserCreate,
 	},
 	Route{
 		"GET",
-		"/user/{id}",
+		"/users/{id}",
 		handler.UserShow,
 	},
 	Route{
 		"PUT",
-		"/user/{id}",
+		"/users/{id}",
 		handler.UserUpdate,
 	},
 	Route{
 		"DELETE",
-		"/user/{id}",
+		"/users/{id}",
 		handler.UserDelete,
 	},
 }

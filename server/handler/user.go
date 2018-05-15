@@ -3,7 +3,6 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
-
 	"github.com/NozomiSugiyama/wcdi-userstore/server/model"
 	"github.com/gorilla/mux"
 )
