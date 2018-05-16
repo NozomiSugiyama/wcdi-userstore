@@ -48,11 +48,10 @@ func GetUser(id int) (User, error) {
 	var session = GetSession("mongodb")
 	db := session.DB("test")
 
-	var users []User
-	db.C("users").Find(bson.M{}).All(&users)
-	fmt.Println("Results All: ", users)
-	
 	user := User{}
+	db.C("users").Find(bson.M{"_id": id}).One(&user)
+	fmt.Println("Results: ", user)
+	
 	return user, nil
 }
 
