@@ -7,7 +7,7 @@ import (
 )
 
 type User struct {
-	ID                   string   `bson:"_id"`
+	ID                   int      `bson:"_id"`
 	DisplayName          string   `bson:"display_name"`
 	FirstName            string   `bson:"first_name"`
 	LastName             string   `bson:"last_name"`
@@ -30,32 +30,28 @@ type User struct {
 type Users []User
 
 func GetUsers() (Users, error) {
-	// users := Users{}
 	var session = GetSession("mongodb")
 	db := session.DB("test")
 
-	// p := make([]User, 0, 10)
-	// query := db.C("users").Find(bson.M{})
-	// query.All(&p)
+	var users []User
+	db.C("users").Find(bson.M{}).All(&users)
+	fmt.Println("Results All: ", users)
 
-	var results []User
-	db.C("users").Find(bson.M{}).All(&results)
-	fmt.Println("Results All: ", results)
-
-	fmt.Printf("%+v\n", results)
-
-	// users = append(users, User{ID: "1"})
-	// users = append(users, User{ID: "2"})
-	// users = append(users, User{ID: "3"})
-
-	return results, nil
+	return users, nil
 }
 
 func CreateUser(user User) error {
 	return nil
 }
 
-func GetUser(id string) (User, error) {
+func GetUser(id int) (User, error) {
+	var session = GetSession("mongodb")
+	db := session.DB("test")
+
+	var users []User
+	db.C("users").Find(bson.M{}).All(&users)
+	fmt.Println("Results All: ", users)
+	
 	user := User{}
 	return user, nil
 }
