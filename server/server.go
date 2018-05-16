@@ -2,9 +2,7 @@ package server
 
 import (
 	"net/http"
-
 	"strconv"
-
 	"github.com/urfave/negroni"
 )
 
